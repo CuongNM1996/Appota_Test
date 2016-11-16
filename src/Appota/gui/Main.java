@@ -72,14 +72,15 @@ public class Main {
                         }
                     }
                     List<Integer> ArrLst = new ArrayList<>();
-                    int i = 69999;
+                    int i = 69999; //the first number
                     while(ArrLst.size() < num) {
+                        //check if that number have sum of digit = 42
                         if(con.sumOfDigit(i)==42) {
-                            ArrLst.add(i);
+                            ArrLst.add(i); //then add to array list
                         }
                         i++;
                     }
-                    System.out.println(ArrLst.get(num-1));
+                    System.out.println(ArrLst.get(num-1)); //print that number
                     System.in.read();
                 }
             }
