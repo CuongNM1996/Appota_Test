@@ -11,7 +11,7 @@ public class Main {
     public static int showMenu() {
         System.out.println("1. Print all tittle of poem");
         System.out.println("2. Search a poem content by tittle");
-        System.out.println("3. Print number 42 with sum of digit is 42");
+        System.out.println("3. Print number n with sum of digit is 42");
         System.out.println("4. Exit");
         System.out.print("Enter your choice: ");
         int userInput = 0;
@@ -57,15 +57,29 @@ public class Main {
                     System.in.read();
                 }
                 if(choice == 3) {
+                    int num = 0;
+                    int k = 0;
+                    while(k!=1) {
+                        try {
+                            System.out.print("Enter a number n: ");
+                            num = Integer.parseInt(in.nextLine());
+                            if(num <= 0) {
+                                throw new Exception("number only");
+                            }
+                            k = 1;
+                        } catch (Exception e) {
+                            System.out.println("n > 0, and number only");
+                        }
+                    }
                     List<Integer> ArrLst = new ArrayList<>();
                     int i = 69999;
-                    while(ArrLst.size() < 42) {
+                    while(ArrLst.size() < num) {
                         if(con.sumOfDigit(i)==42) {
                             ArrLst.add(i);
                         }
                         i++;
                     }
-                    System.out.println(ArrLst.get(41));
+                    System.out.println(ArrLst.get(num-1));
                     System.in.read();
                 }
             }
