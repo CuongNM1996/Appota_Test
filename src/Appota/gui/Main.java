@@ -72,12 +72,14 @@ public class Main {
                         }
                     }
                     List<Integer> ArrLst = new ArrayList<>();
+                    //this block code will find the first number
                     int NumberOf9 = 0;
-                    String frsNum = ""+(42%9);
-                    for(int i = 0; i < (42/9);i++) {
+                    String frsNum = ""+(42%9);               
+                    for(int i = 0; i < (42/9);i++) {          
                         frsNum+="9";
                     }
-                    int i = Integer.parseInt(frsNum); //the first number
+                    int i = Integer.parseInt(frsNum);//the first number
+                    
                     while(ArrLst.size() < num) {
                         //check if that number have sum of digit = 42
                         if(con.sumOfDigit(i)==42) {
